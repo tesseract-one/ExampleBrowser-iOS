@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54E9691EB130112B959F80AA /* Pods_Browser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9B2610C289D211FFD6ED1E /* Pods_Browser.framework */; };
 		65223F71214D986200D937A9 /* Web3Provider.js in Resources */ = {isa = PBXBuildFile; fileRef = 65223F70214D986200D937A9 /* Web3Provider.js */; };
 		65223F73214D9AE200D937A9 /* TesWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65223F72214D9AE200D937A9 /* TesWebView.swift */; };
 		65BC9CD4214179F6005D496C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC9CD3214179F6005D496C /* AppDelegate.swift */; };
@@ -18,10 +17,11 @@
 		9255B0EE223ED3980019BF9E /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255B0ED223ED3980019BF9E /* Wallet.swift */; };
 		9255B0F0223ED3A30019BF9E /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9255B0EF223ED3A30019BF9E /* JSON.swift */; };
 		92E5132121815FD3006184A5 /* SiteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E5132021815FD3006184A5 /* SiteListViewController.swift */; };
+		B6DC8200029FC903259C9374 /* Pods_Browser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A490165564DE226E5F81AA /* Pods_Browser.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E9B2610C289D211FFD6ED1E /* Pods_Browser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Browser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A490165564DE226E5F81AA /* Pods_Browser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Browser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65223F70214D986200D937A9 /* Web3Provider.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Web3Provider.js; sourceTree = "<group>"; };
 		65223F72214D9AE200D937A9 /* TesWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesWebView.swift; sourceTree = "<group>"; };
 		65BC9CD1214179F6005D496C /* Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E9691EB130112B959F80AA /* Pods_Browser.framework in Frameworks */,
+				B6DC8200029FC903259C9374 /* Pods_Browser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 		D21AA81160389222522E8332 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E9B2610C289D211FFD6ED1E /* Pods_Browser.framework */,
+				05A490165564DE226E5F81AA /* Pods_Browser.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 				65BC9CCE214179F6005D496C /* Frameworks */,
 				65BC9CCF214179F6005D496C /* Resources */,
 				92E5131F21815477006184A5 /* Run Crashlytics */,
-				6CCD5A986C482A1D48027715 /* [CP] Embed Pods Frameworks */,
+				0B6644527BE49FE7F78BEBD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,25 +179,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4591DC9211F56D2D33EEFBFF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Browser-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CCD5A986C482A1D48027715 /* [CP] Embed Pods Frameworks */ = {
+		0B6644527BE49FE7F78BEBD9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +215,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Browser/Pods-Browser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4591DC9211F56D2D33EEFBFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Browser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92E5131F21815477006184A5 /* Run Crashlytics */ = {

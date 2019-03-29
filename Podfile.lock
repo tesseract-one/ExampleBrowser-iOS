@@ -9,6 +9,8 @@ PODS:
   - SerializableValue (0.0.1)
   - SipHash (1.2.2)
   - TesseractEthereumBase (0.0.1):
+    - TesseractEthereumBase/Core (= 0.0.1)
+  - TesseractEthereumBase/Core (0.0.1):
     - BigInt (~> 3.1)
     - CryptoSwift (~> 0.15)
     - SerializableValue (~> 0.0.1)
@@ -76,13 +78,13 @@ CHECKOUT OPTIONS:
     :commit: 10f23664e16c600002178cece070722c09e7b7c1
     :git: https://github.com/ypopovych/swift-serializable.git
   TesseractEthereumBase:
-    :commit: 6d02a0852a604fc9ae133b314db9fffcddb84883
+    :commit: 4ad54158b44ac3482125880c4948c5c20b18bc89
     :git: "git@github.com:ypopovych/swift-ethereum-base.git"
   TesseractEthereumWeb3:
-    :commit: e5e5153b8427a3991e72e19cd3d33f943f255f27
+    :commit: 0781788f263d937284d9baa74f9f9f8694738b7c
     :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
   TesseractOpenWallet:
-    :commit: efcf1405846ee317fc8e9de01a5af777cb634c55
+    :commit: 62d6c369f75e799f6c4ff1763207eccb7460f41a
     :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
   Web3:
     :commit: 87523600fcec849b39ccf92c73a923d48c1f44d9
@@ -96,9 +98,9 @@ SPEC CHECKSUMS:
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   SerializableValue: 68b0bc3f578c45f99279bc0297213a57ec532663
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
-  TesseractEthereumBase: 46b03bf12a8381fa17849a49ab46b1a134c940fa
-  TesseractEthereumWeb3: d54a6dc9f26eeb912627d1d31f6765859d9a5d7e
-  TesseractOpenWallet: 0d5c2cc401567f2be8f92853de26d094f8fb401a
+  TesseractEthereumBase: ec0452a5fc8a7c3b93daf880851b63467f87ad10
+  TesseractEthereumWeb3: 8af47e3b44bad68864688cbacc9c6b35b5d521c6
+  TesseractOpenWallet: 045fe5b450e257efc64f9826a697cd95f610cbc0
   Web3: e9be7ef88585e252df50abc28538d6e4691c786e
 
 PODFILE CHECKSUM: 1d558974aaa2581f106c6f445bd9f06562934d64
