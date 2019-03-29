@@ -1,15 +1,15 @@
 //
 //  AppDelegate.swift
-//  CryptoKitties
+//  Browser
 //
 //  Created by Daniel Leping on 06/09/2018.
-//  Copyright © 2018 Daniel Leping. All rights reserved.
+//  Copyright © 2018 Tesseract Systems, Inc. All rights reserved.
 //
 
 import UIKit
 import Fabric
 import Crashlytics
-import TesSDK
+import OpenWallet
 
 
 @UIApplicationMain
@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
-        openWallet = OpenWallet(window: window!)
+        openWallet = OpenWallet(networks: [.Ethereum])
         return true
     }
 

@@ -1,15 +1,19 @@
 use_frameworks!
-platform :ios, "11.0"
+platform :ios, "10.0"
 
 target :Browser do
     pod 'Fabric'
     pod 'Crashlytics'
 
-    pod 'TesSDK', :path => '../'
+    pod 'TesseractEthereumWeb3', :git => 'git@github.com:ypopovych/ios-web3-ethereum.git', :branch => 'master'
 
+    pod 'TesseractOpenWallet/Ethereum', :git => 'git@github.com:ypopovych/ios-openwallet-sdk.git', :branch => 'master'
+
+    # should be removed after publication into CocoaPods
+    pod 'TesseractEthereumBase', :git => 'git@github.com:ypopovych/swift-ethereum-base.git', :branch => 'master'
+    pod 'SerializableValue', :git => 'https://github.com/ypopovych/swift-serializable.git', :branch => 'master'
+    
     pod 'Web3', :git => 'https://github.com/crossroadlabs/Web3.swift.git', :branch => 'master'
-    pod 'Web3/PromiseKit', :git => 'https://github.com/crossroadlabs/Web3.swift.git', :branch => 'master'
-    pod 'SQLite.swift', :git => 'https://github.com/ottosuess/SQLite.swift.git', :branch => 'master'
 end
 
 post_install do |pi|

@@ -1,14 +1,14 @@
 //
 //  TesWebView.swift
-//  CryptoKitties
+//  Browser
 //
 //  Created by Daniel Leping on 15/09/2018.
-//  Copyright © 2018 Daniel Leping. All rights reserved.
+//  Copyright © 2018 Tesseract Systems, Inc. All rights reserved.
 //
 
 import Foundation
 import WebKit
-import Web3
+import EthereumWeb3
 
 public enum TesWebMessage {
     case message(id: Int, method: String, message: Data)
@@ -84,11 +84,11 @@ private class TesWebViewMessageHandler: NSObject, WKScriptMessageHandler {
 //}
 
 public extension TesWebSink {
-    public func reply(id: Int, result: JSONValueEncodable) {
+    func reply(id: Int, result: JSONValueEncodable) {
         reply(id: id, error: nil, result: result)
     }
     
-    public func reply(id: Int, error: JSONValueEncodable) {
+    func reply(id: Int, error: JSONValueEncodable) {
         reply(id: id, error: error, result: nil)
     }
 }

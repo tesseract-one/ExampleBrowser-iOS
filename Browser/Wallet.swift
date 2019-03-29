@@ -3,7 +3,7 @@
 //  Browser
 //
 //  Created by Yehor Popovych on 3/17/19.
-//  Copyright © 2019 Daniel Leping. All rights reserved.
+//  Copyright © 2019 Tesseract Systems, Inc. All rights reserved.
 //
 
 import Foundation

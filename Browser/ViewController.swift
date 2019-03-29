@@ -1,14 +1,14 @@
 //
 //  ViewController.swift
-//  CryptoKitties
+//  Browser
 //
 //  Created by Daniel Leping on 06/09/2018.
-//  Copyright © 2018 Daniel Leping. All rights reserved.
+//  Copyright © 2018 Tesseract Systems, Inc. All rights reserved.
 //
 
 import UIKit
 import WebKit
-import TesSDK
+import EthereumWeb3
 
 public let TESSERACT_ETHEREUM_ENDPOINTS: Dictionary<UInt64, String> = [
     1: "https://mainnet.infura.io/v3/f20390fe230e46608572ac4378b70668",
@@ -114,7 +114,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let endpoint = TESSERACT_ETHEREUM_ENDPOINTS[netVersion!]!
         
         wallet = Wallet(
-            web3: openWallet.distributedAPI.Ethereum.web3(rpcUrl: endpoint),
+            web3: openWallet.ethereum.web3(rpcUrl: endpoint),
             endpoint: endpoint,
             webState: webView
         )

@@ -1,35 +1,31 @@
 PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
-  - CKMnemonic (0.1.7):
-    - CryptoSwift
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - CryptoSwift (0.15.0)
   - Fabric (1.9.0)
-  - PromiseKit (6.8.3):
-    - PromiseKit/CorePromise (= 6.8.3)
-    - PromiseKit/Foundation (= 6.8.3)
-    - PromiseKit/UIKit (= 6.8.3)
-  - PromiseKit/CorePromise (6.8.3)
-  - PromiseKit/Foundation (6.8.3):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.8.3):
-    - PromiseKit/CorePromise
   - secp256k1.swift (0.1.4)
+  - SerializableValue (0.0.1)
   - SipHash (1.2.2)
-  - SQLite.swift (0.11.5):
-    - SQLite.swift/standard (= 0.11.5)
-  - SQLite.swift/standard (0.11.5)
-  - SQLiteMigrationManager.swift (0.5.0):
-    - SQLite.swift (~> 0.11.0)
-  - TesSDK (0.0.1):
-    - CKMnemonic (~> 0.1)
-    - PromiseKit (~> 6.8)
-    - SQLite.swift
-    - SQLiteMigrationManager.swift
-    - Web3
-    - Web3/PromiseKit
+  - TesseractEthereumBase (0.0.1):
+    - BigInt (~> 3.1)
+    - CryptoSwift (~> 0.15)
+    - SerializableValue (~> 0.0.1)
+  - TesseractEthereumWeb3 (0.0.1):
+    - TesseractEthereumWeb3/Core (= 0.0.1)
+  - TesseractEthereumWeb3/Core (0.0.1):
+    - TesseractEthereumBase (~> 0.0.1)
+    - Web3 (~> 0.3.1)
+  - TesseractOpenWallet/Client (0.0.1):
+    - TesseractOpenWallet/Core
+  - TesseractOpenWallet/Core (0.0.1)
+  - TesseractOpenWallet/Ethereum (0.0.1):
+    - TesseractOpenWallet/Client
+    - TesseractOpenWallet/EthereumCore
+  - TesseractOpenWallet/EthereumCore (0.0.1):
+    - TesseractEthereumBase (~> 0.0.1)
+    - TesseractOpenWallet/Core
   - Web3 (0.3.1):
     - Web3/Core (= 0.3.1)
     - Web3/HTTPExtension (= 0.3.1)
@@ -39,62 +35,72 @@ PODS:
     - secp256k1.swift (~> 0.1)
   - Web3/HTTPExtension (0.3.1):
     - Web3/Core
-  - Web3/PromiseKit (0.3.1):
-    - PromiseKit/CorePromise (~> 6.0)
-    - Web3/Core
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
-  - SQLite.swift (from `https://github.com/ottosuess/SQLite.swift.git`, branch `master`)
-  - TesSDK (from `../`)
+  - SerializableValue (from `https://github.com/ypopovych/swift-serializable.git`, branch `master`)
+  - "TesseractEthereumBase (from `git@github.com:ypopovych/swift-ethereum-base.git`, branch `master`)"
+  - "TesseractEthereumWeb3 (from `git@github.com:ypopovych/ios-web3-ethereum.git`, branch `master`)"
+  - "TesseractOpenWallet/Ethereum (from `git@github.com:ypopovych/ios-openwallet-sdk.git`, branch `master`)"
   - Web3 (from `https://github.com/crossroadlabs/Web3.swift.git`, branch `master`)
-  - Web3/PromiseKit (from `https://github.com/crossroadlabs/Web3.swift.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BigInt
-    - CKMnemonic
     - Crashlytics
     - CryptoSwift
     - Fabric
-    - PromiseKit
     - secp256k1.swift
     - SipHash
-    - SQLiteMigrationManager.swift
 
 EXTERNAL SOURCES:
-  SQLite.swift:
+  SerializableValue:
     :branch: master
-    :git: https://github.com/ottosuess/SQLite.swift.git
-  TesSDK:
-    :path: "../"
+    :git: https://github.com/ypopovych/swift-serializable.git
+  TesseractEthereumBase:
+    :branch: master
+    :git: "git@github.com:ypopovych/swift-ethereum-base.git"
+  TesseractEthereumWeb3:
+    :branch: master
+    :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
+  TesseractOpenWallet:
+    :branch: master
+    :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
   Web3:
     :branch: master
     :git: https://github.com/crossroadlabs/Web3.swift.git
 
 CHECKOUT OPTIONS:
-  SQLite.swift:
-    :commit: becacc73f239d8774e2d0c078ff3e6bcbb4ea972
-    :git: https://github.com/ottosuess/SQLite.swift.git
+  SerializableValue:
+    :commit: 10f23664e16c600002178cece070722c09e7b7c1
+    :git: https://github.com/ypopovych/swift-serializable.git
+  TesseractEthereumBase:
+    :commit: 6d02a0852a604fc9ae133b314db9fffcddb84883
+    :git: "git@github.com:ypopovych/swift-ethereum-base.git"
+  TesseractEthereumWeb3:
+    :commit: e5e5153b8427a3991e72e19cd3d33f943f255f27
+    :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
+  TesseractOpenWallet:
+    :commit: efcf1405846ee317fc8e9de01a5af777cb634c55
+    :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
   Web3:
     :commit: 87523600fcec849b39ccf92c73a923d48c1f44d9
     :git: https://github.com/crossroadlabs/Web3.swift.git
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CKMnemonic: 88e745afffea6f3c719c799d9869a2ea5eb9f08b
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  SerializableValue: 68b0bc3f578c45f99279bc0297213a57ec532663
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
-  SQLite.swift: 7e42c4b88dc7a5d764fbd431001e6d8dc8c1cfce
-  SQLiteMigrationManager.swift: 646cfccb9a446b3134d19dca7a5ec5437f82da76
-  TesSDK: 84b558b55a0a750eccc43d98e8249b30e18e83d8
+  TesseractEthereumBase: 46b03bf12a8381fa17849a49ab46b1a134c940fa
+  TesseractEthereumWeb3: d54a6dc9f26eeb912627d1d31f6765859d9a5d7e
+  TesseractOpenWallet: 0d5c2cc401567f2be8f92853de26d094f8fb401a
   Web3: e9be7ef88585e252df50abc28538d6e4691c786e
 
-PODFILE CHECKSUM: 075ab273176f1a9f708fcc0e620975c710918bc2
+PODFILE CHECKSUM: 1d558974aaa2581f106c6f445bd9f06562934d64
 
 COCOAPODS: 1.6.1
