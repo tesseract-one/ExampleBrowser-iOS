@@ -5,12 +5,12 @@ target :Browser do
     pod 'Fabric'
     pod 'Crashlytics'
 
-    pod 'TesseractEthereumWeb3', :git => 'git@github.com:ypopovych/ios-web3-ethereum.git', :branch => 'master'
+    pod 'TesseractEthereumWeb3', :git => 'https://github.com/tesseract-one/ios-web3-ethereum.git', :branch => 'master'
 
-    pod 'TesseractOpenWallet/Ethereum', :git => 'git@github.com:ypopovych/ios-openwallet-sdk.git', :branch => 'master'
+    pod 'TesseractOpenWallet/Ethereum', :git => 'https://github.com/tesseract-one/ios-openwallet-sdk.git', :branch => 'master'
 
     # should be removed after publication into CocoaPods
-    pod 'TesseractEthereumBase', :git => 'git@github.com:ypopovych/swift-ethereum-base.git', :branch => 'master'
+    pod 'TesseractEthereumBase', :git => 'https://github.com/tesseract-one/swift-ethereum-base.git', :branch => 'master'
     pod 'SerializableValue', :git => 'https://github.com/tesseract-one/swift-serializable.git', :branch => 'master'
     
     pod 'Web3', :git => 'https://github.com/tesseract-one/Web3.swift.git', :branch => 'master'

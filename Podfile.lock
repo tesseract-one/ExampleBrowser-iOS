@@ -42,9 +42,9 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - SerializableValue (from `https://github.com/tesseract-one/swift-serializable.git`, branch `master`)
-  - "TesseractEthereumBase (from `git@github.com:ypopovych/swift-ethereum-base.git`, branch `master`)"
-  - "TesseractEthereumWeb3 (from `git@github.com:ypopovych/ios-web3-ethereum.git`, branch `master`)"
-  - "TesseractOpenWallet/Ethereum (from `git@github.com:ypopovych/ios-openwallet-sdk.git`, branch `master`)"
+  - TesseractEthereumBase (from `https://github.com/tesseract-one/swift-ethereum-base.git`, branch `master`)
+  - TesseractEthereumWeb3 (from `https://github.com/tesseract-one/ios-web3-ethereum.git`, branch `master`)
+  - TesseractOpenWallet/Ethereum (from `https://github.com/tesseract-one/ios-openwallet-sdk.git`, branch `master`)
   - Web3 (from `https://github.com/tesseract-one/Web3.swift.git`, branch `master`)
 
 SPEC REPOS:
@@ -62,13 +62,13 @@ EXTERNAL SOURCES:
     :git: https://github.com/tesseract-one/swift-serializable.git
   TesseractEthereumBase:
     :branch: master
-    :git: "git@github.com:ypopovych/swift-ethereum-base.git"
+    :git: https://github.com/tesseract-one/swift-ethereum-base.git
   TesseractEthereumWeb3:
     :branch: master
-    :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
+    :git: https://github.com/tesseract-one/ios-web3-ethereum.git
   TesseractOpenWallet:
     :branch: master
-    :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
+    :git: https://github.com/tesseract-one/ios-openwallet-sdk.git
   Web3:
     :branch: master
     :git: https://github.com/tesseract-one/Web3.swift.git
@@ -78,16 +78,16 @@ CHECKOUT OPTIONS:
     :commit: a77ea4589520eac0406912dca1dc54466ffa82ac
     :git: https://github.com/tesseract-one/swift-serializable.git
   TesseractEthereumBase:
-    :commit: bddcb4b9128316900ee1da5be73307c94c55e70d
-    :git: "git@github.com:ypopovych/swift-ethereum-base.git"
+    :commit: 4597c5f222589480ef140187b270cc652ed27be4
+    :git: https://github.com/tesseract-one/swift-ethereum-base.git
   TesseractEthereumWeb3:
-    :commit: e3af467bef4ddf21747ac64c4b7e6ce083f83e14
-    :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
+    :commit: 56a745b5b8f973e336f0cf91eda37f49ae9e8cb7
+    :git: https://github.com/tesseract-one/ios-web3-ethereum.git
   TesseractOpenWallet:
-    :commit: b3ef5469d3ca83f112d1bb749a5aa4ba6ddc4b15
-    :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
+    :commit: fae773428d5bb91413921759b2f6f9d20db266c8
+    :git: https://github.com/tesseract-one/ios-openwallet-sdk.git
   Web3:
-    :commit: ad984eb9a7c6005b7c6c5b27d44d3badd801d593
+    :commit: 3d416183fade5b9c94b23bdb1c87d0fb865ccb69
     :git: https://github.com/tesseract-one/Web3.swift.git
 
 SPEC CHECKSUMS:
@@ -103,6 +103,6 @@ SPEC CHECKSUMS:
   TesseractOpenWallet: e4e3ac5d6e93e7d644a43d85f8dcdc645bfe9121
   Web3: e9be7ef88585e252df50abc28538d6e4691c786e
 
-PODFILE CHECKSUM: d30fe680aa8c81e9117eb1d66436523b91a0fc6f
+PODFILE CHECKSUM: 12788f988e87d801034b588123a5d6fd14ce3602
 
 COCOAPODS: 1.6.1
