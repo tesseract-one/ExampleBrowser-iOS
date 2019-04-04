@@ -84,7 +84,7 @@ CHECKOUT OPTIONS:
     :commit: e3af467bef4ddf21747ac64c4b7e6ce083f83e14
     :git: "git@github.com:ypopovych/ios-web3-ethereum.git"
   TesseractOpenWallet:
-    :commit: f67bfe246896923b0af3b4b4010ef5d5e3112b4e
+    :commit: b3ef5469d3ca83f112d1bb749a5aa4ba6ddc4b15
     :git: "git@github.com:ypopovych/ios-openwallet-sdk.git"
   Web3:
     :commit: ad984eb9a7c6005b7c6c5b27d44d3badd801d593
