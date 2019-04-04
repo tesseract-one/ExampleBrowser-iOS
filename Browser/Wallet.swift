@@ -208,14 +208,13 @@ class Wallet {
         default:
             var req = try! Wallet.decoder.decode(JSONValue.self, from: message).object!
             req["id"] = web3.rpcId.encode()
-            web3.provider.dataProvider.send(data: JSONValue(req).jsonData) { error, result in
-                if let error = error {
-                    callback(id, JSONValue.error(error), nil)
-                } else if let result = result {
+            web3.provider.dataProvider.send(data: JSONValue(req).jsonData) { result in
+                switch result {
+                case .failure(let err):
+                    callback(id, JSONValue.error(err), nil)
+                case .success(let result):
                     let js = try! Wallet.decoder.decode(JSONValue.self, from: result)
                     callback(id, nil, js["result"])
-                } else {
-                    callback(id, nil, nil)
                 }
             }
         }
