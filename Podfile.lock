@@ -75,16 +75,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SerializableValue:
-    :commit: a77ea4589520eac0406912dca1dc54466ffa82ac
+    :commit: 0e4aa421681921c3144c42f9c4439eba832f81d1
     :git: https://github.com/tesseract-one/swift-serializable.git
   TesseractEthereumBase:
-    :commit: 4597c5f222589480ef140187b270cc652ed27be4
+    :commit: 7ef49035b4e26d6d9a3e2c08efe0a573e351730b
     :git: https://github.com/tesseract-one/swift-ethereum-base.git
   TesseractEthereumWeb3:
     :commit: 56a745b5b8f973e336f0cf91eda37f49ae9e8cb7
     :git: https://github.com/tesseract-one/ios-web3-ethereum.git
   TesseractOpenWallet:
-    :commit: fae773428d5bb91413921759b2f6f9d20db266c8
+    :commit: f1eb794fd24636c03a5d2cfcdf0ccb897bc6a413
     :git: https://github.com/tesseract-one/ios-openwallet-sdk.git
   Web3:
     :commit: 3d416183fade5b9c94b23bdb1c87d0fb865ccb69
@@ -96,7 +96,7 @@ SPEC CHECKSUMS:
   CryptoSwift: 769f58a9e89f64e8796c2e59ce5f002dc81a2438
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
-  SerializableValue: 4dec77eadb50f94f4070f84a8826c51bc481e9cd
+  SerializableValue: 231634d0fa47a27bfbf46337c954107454864c9d
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   TesseractEthereumBase: cc36a0266461f2bceaa18e10942bfc91e31d0fa3
   TesseractEthereumWeb3: 24f316d6cb0d22cf5ea3b53e8fba224f73c8cf25
