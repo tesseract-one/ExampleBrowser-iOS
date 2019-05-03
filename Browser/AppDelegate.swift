@@ -7,19 +7,16 @@
 //
 
 import UIKit
-import OpenWallet
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var openWallet: OpenWallet!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        openWallet = OpenWallet(networks: [.Ethereum])
         return true
     }
 

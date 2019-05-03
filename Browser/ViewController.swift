@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import EthereumWeb3
+import Tesseract
 
 public let TESSERACT_ETHEREUM_ENDPOINTS: Dictionary<UInt64, String> = [
     1: "https://mainnet.infura.io/v3/f20390fe230e46608572ac4378b70668",
@@ -110,11 +110,10 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
         let webView = TesWebView(frame: self.view.frame, networkId: netVersion!)
         
-        let openWallet = (UIApplication.shared.delegate! as! AppDelegate).openWallet!
         let endpoint = TESSERACT_ETHEREUM_ENDPOINTS[netVersion!]!
         
         wallet = Wallet(
-            web3: openWallet.ethereum.web3(rpcUrl: endpoint),
+            web3: Tesseract.Ethereum.Web3(rpcUrl: endpoint),
             endpoint: endpoint,
             webState: webView
         )

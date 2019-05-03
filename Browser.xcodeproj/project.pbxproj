@@ -193,6 +193,7 @@
 				"${BUILT_PRODUCTS_DIR}/Tesseract.EthereumTypes/EthereumTypes.framework",
 				"${BUILT_PRODUCTS_DIR}/Tesseract.EthereumWeb3/EthereumWeb3.framework",
 				"${BUILT_PRODUCTS_DIR}/Tesseract.OpenWallet/OpenWallet.framework",
+				"${BUILT_PRODUCTS_DIR}/Tesseract/Tesseract.framework",
 				"${BUILT_PRODUCTS_DIR}/Web3/Web3.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework",
 			);
@@ -206,6 +207,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumTypes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EthereumWeb3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenWallet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tesseract.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Web3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1.framework",
 			);

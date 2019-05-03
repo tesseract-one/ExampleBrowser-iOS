@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Web3
+import Tesseract
 
 extension JSONValue {
     init(_ dict: Dictionary<String, JSONValueEncodable>) {

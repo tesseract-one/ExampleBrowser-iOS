@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Web3
+import Tesseract
 
 extension NSError: JSONValueEncodable {
     public func encode() -> JSONValue {
