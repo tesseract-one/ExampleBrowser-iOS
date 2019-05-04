@@ -135,31 +135,6 @@ public class TesWebView : WKWebView, TesWebSink, TesWebStateSink {
             .flatMap { $0.replacingOccurrences(of: "'", with: "\\'") }
     }
     
-//    private func serialize(object:Any?) -> String? {
-//        return object.flatMap { object in
-//            switch object {
-//            case let string as String:
-//                return "\"\(string)\"".data(using: .utf8)
-//            case _ as NSNull:
-//                return nil
-//            case let number as IntegerLiteralType:
-//                return "\(number)".data(using: .utf8)
-//            case let number as FloatLiteralType:
-//                return "\(number)".data(using: .utf8)
-//            case let bool as BooleanLiteralType:
-//                return (bool ? "true" : "false").data(using: .utf8)
-//            case let err as Error:
-//                return "\"\(err.localizedDescription)\"".data(using: .utf8)
-//            default:
-//                return try? JSONSerialization.data(withJSONObject: object, options: [])
-//            }
-//        }.flatMap { data in
-//            String(data: data, encoding: .utf8)
-//        }.flatMap { string in
-//            string.replacingOccurrences(of: "'", with: "\\'")
-//        }
-//    }
-    
     private func assembleMessageCall(id:Int, error: JSONValueEncodable?, result: JSONValueEncodable?) -> String {
         let err = error.flatMap(serialize) ?? "null"
         let res = result.flatMap(serialize) ?? "null"
