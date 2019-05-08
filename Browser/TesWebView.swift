@@ -8,7 +8,8 @@
 
 import Foundation
 import WebKit
-import EthereumWeb3
+import Tesseract
+import Serializable
 
 public enum TesWebMessage {
     case message(id: Int, method: String, message: Data)
@@ -41,11 +42,11 @@ private extension WKScriptMessage {
 }
 
 public protocol TesWebSink: AnyObject {
-    func reply(id: Int, error: JSONValueEncodable?, result: JSONValueEncodable?)
+    func reply(id: Int, result: Swift.Result<SerializableValueEncodable, SerializableError>)
 }
 
 public protocol TesWebStateSink: AnyObject {
-    func setState(key: String, value: JSONValueEncodable?)
+    func setState(key: String, value: SerializableValueEncodable?)
 }
 
 typealias TesWebRecepient = (TesWebSink, TesWebMessage) -> Void
@@ -64,32 +65,6 @@ private class TesWebViewMessageHandler: NSObject, WKScriptMessageHandler {
         for recepient in recepients {
             recepient(sink, msg)
         }
-    }
-}
-
-//private func assembleJS(files: [String]) throws -> String {
-//    let paths = files.compactMap { file in
-//        Bundle.main.path(forResource: file, ofType: "js")
-//    }
-//    
-//    let contents = try paths.map { path in
-//        try String(contentsOfFile: path, encoding: .utf8)
-//    }
-//    
-//    let glued = contents.reduce("\n") { z, a in
-//        z + a + "\n"
-//    }
-//    
-//    return "(function(window) {" + glued + "})(window);"
-//}
-
-public extension TesWebSink {
-    func reply(id: Int, result: JSONValueEncodable) {
-        reply(id: id, error: nil, result: result)
-    }
-    
-    func reply(id: Int, error: JSONValueEncodable) {
-        reply(id: id, error: error, result: nil)
     }
 }
 
@@ -128,14 +103,14 @@ public class TesWebView : WKWebView, TesWebSink, TesWebStateSink {
         messageHandler.recepients.append(recepient)
     }
     
-    private func serialize(object: JSONValueEncodable?) -> String? {
+    private func serialize(object: SerializableValueEncodable?) -> String? {
         return object
-            .flatMap { $0.encode().jsonData }
+            .flatMap { $0.serializable.jsonData }
             .flatMap { String(data: $0, encoding: .utf8) }
             .flatMap { $0.replacingOccurrences(of: "'", with: "\\'") }
     }
     
-    private func assembleMessageCall(id:Int, error: JSONValueEncodable?, result: JSONValueEncodable?) -> String {
+    private func assembleMessageCall(id:Int, error: SerializableValueEncodable?, result: SerializableValueEncodable?) -> String {
         let err = error.flatMap(serialize) ?? "null"
         let res = result.flatMap(serialize) ?? "null"
         
@@ -143,7 +118,7 @@ public class TesWebView : WKWebView, TesWebSink, TesWebStateSink {
         return "window.web3.currentProvider.accept(\(id), '\(err)', '\(res)');"
     }
     
-    public func setState(key: String, value: JSONValueEncodable?) {
+    public func setState(key: String, value: SerializableValueEncodable?) {
         let k = serialize(object: key)!
         let v = value.flatMap(serialize) ?? "null"
         let js = "window.web3.currentProvider.setState('\(k)', '\(v)');"
@@ -152,8 +127,14 @@ public class TesWebView : WKWebView, TesWebSink, TesWebStateSink {
         }
     }
     
-    public func reply(id: Int, error: JSONValueEncodable?, result: JSONValueEncodable?) {
-        let js = assembleMessageCall(id: id, error: error, result: result)
+    public func reply(id: Int, result: Swift.Result<SerializableValueEncodable, SerializableError>) {
+        var js: String
+        switch result {
+        case .failure(let err):
+            js = assembleMessageCall(id: id, error: err, result: nil)
+        case .success(let val):
+            js = assembleMessageCall(id: id, error: nil, result: val)
+        }
         //print(js)
         DispatchQueue.main.async {
             self.evaluateJavaScript(js)
