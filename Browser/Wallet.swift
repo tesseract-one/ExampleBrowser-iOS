@@ -9,7 +9,6 @@
 import Foundation
 import Tesseract
 import Serializable
-import Ethereum
 
 extension NSError: SerializableValueEncodable {
     

@@ -6,9 +6,9 @@ PODS:
     - BigInt (~> 4.0)
     - CryptoSwift (~> 1.0)
     - Serializable.swift (~> 0.1)
-  - Tesseract.EthereumWeb3 (0.1.0):
-    - Tesseract.EthereumWeb3/Core (= 0.1.0)
-  - Tesseract.EthereumWeb3/Core (0.1.0):
+  - Tesseract.EthereumWeb3 (0.1.1):
+    - Tesseract.EthereumWeb3/Core (= 0.1.1)
+  - Tesseract.EthereumWeb3/Core (0.1.1):
     - Tesseract.EthereumTypes (~> 0.1)
   - Tesseract.OpenWallet/Client (0.1.4):
     - Tesseract.OpenWallet/Core
@@ -50,7 +50,7 @@ SPEC CHECKSUMS:
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   Serializable.swift: 30c5cd7c995bc8140afbd0df09b8185d461aa61b
   Tesseract.EthereumTypes: 117e74932d9fbb6f08b78865530242bbe2708b35
-  Tesseract.EthereumWeb3: 959a1f6c640e63d20b22507b3b0adf39af4a8243
+  Tesseract.EthereumWeb3: 8e2403479dbcdcee80ed4b9d3e24d26f031a1a21
   Tesseract.OpenWallet: 2451581313c1b21741af11ba439db138df4aaa5a
   TesseractSDK: 0c702425b0318679ca6b2be3fdf005165949e799
 
