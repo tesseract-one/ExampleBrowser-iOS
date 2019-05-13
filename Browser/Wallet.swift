@@ -13,29 +13,29 @@ import Serializable
 extension NSError: SerializableValueEncodable {
     
     public var serializable: SerializableValue {
-        return SerializableValue([
+        return [
             "code": code,
             "domain": domain,
             "debug": debugDescription,
             "description": description
-        ])
+        ]
     }
 }
 
 extension SerializableError {
     static func error(_ err: Swift.Error) -> SerializableError {
-        return .object([
-            "code": (-32000).serializable,
-            "message": "\(err)".serializable,
-            "data": [(err as NSError).serializable].serializable
-        ])
+        return [
+            "code": (-32000),
+            "message": "\(err)",
+            "data": [(err as NSError)]
+        ]
     }
     
     static func web3Error(code: Int, message: String) -> SerializableError {
-        return .object([
-            "code": code.serializable,
-            "message": message.serializable
-        ])
+        return [
+            "code": code,
+            "message": message
+        ]
     }
 }
 

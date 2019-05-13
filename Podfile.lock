@@ -1,22 +1,22 @@
 PODS:
   - BigInt (4.0.0)
   - CryptoSwift (1.0.0)
-  - Serializable.swift (0.1.2)
-  - Tesseract.EthereumTypes (0.1.7):
+  - Serializable.swift (0.1.5)
+  - Tesseract.EthereumTypes (0.1.8):
     - BigInt (~> 4.0)
     - CryptoSwift (~> 1.0)
     - Serializable.swift (~> 0.1)
-  - Tesseract.EthereumWeb3 (0.1.1):
-    - Tesseract.EthereumWeb3/Core (= 0.1.1)
-  - Tesseract.EthereumWeb3/Core (0.1.1):
+  - Tesseract.EthereumWeb3 (0.1.2):
+    - Tesseract.EthereumWeb3/Core (= 0.1.2)
+  - Tesseract.EthereumWeb3/Core (0.1.2):
     - Tesseract.EthereumTypes (~> 0.1)
-  - Tesseract.OpenWallet/Client (0.1.4):
+  - Tesseract.OpenWallet/Client (0.1.5):
     - Tesseract.OpenWallet/Core
-  - Tesseract.OpenWallet/Core (0.1.4)
-  - Tesseract.OpenWallet/Ethereum (0.1.4):
+  - Tesseract.OpenWallet/Core (0.1.5)
+  - Tesseract.OpenWallet/Ethereum (0.1.5):
     - Tesseract.OpenWallet/Client
     - Tesseract.OpenWallet/Ethereum.Core
-  - Tesseract.OpenWallet/Ethereum.Core (0.1.4):
+  - Tesseract.OpenWallet/Ethereum.Core (0.1.5):
     - Serializable.swift (~> 0.1)
     - Tesseract.EthereumTypes (~> 0.1)
     - Tesseract.OpenWallet/Core
@@ -48,10 +48,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   BigInt: 2aad1a9942dc932ec8b84290d2c564a3d76f97ab
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
-  Serializable.swift: 30c5cd7c995bc8140afbd0df09b8185d461aa61b
-  Tesseract.EthereumTypes: 117e74932d9fbb6f08b78865530242bbe2708b35
-  Tesseract.EthereumWeb3: 8e2403479dbcdcee80ed4b9d3e24d26f031a1a21
-  Tesseract.OpenWallet: 2451581313c1b21741af11ba439db138df4aaa5a
+  Serializable.swift: 0e607d290da30d36e4cebb41e12c9923806331e1
+  Tesseract.EthereumTypes: 78b0b52b471c033159b4d21062b3b42093cdb100
+  Tesseract.EthereumWeb3: 952708a93dc2a8b4820526c115d0bca88aa0db1c
+  Tesseract.OpenWallet: 753ddf5141c30d462f53b921c5f04c6cf35ace8a
   TesseractSDK: 0c702425b0318679ca6b2be3fdf005165949e799
 
 PODFILE CHECKSUM: 5f1dd148021ba9dbad0a4f7889732e8c75de8848
